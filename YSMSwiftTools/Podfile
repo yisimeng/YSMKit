@@ -1,0 +1,18 @@
+platform :ios, '9.0'
+target 'YSMSwiftTools' do
+  use_frameworks!
+
+pod 'HandyJSON'
+pod 'Alamofire'
+pod 'Kingfisher'
+pod 'SwiftyJSON'
+
+  target 'YSMSwiftToolsTests' do
+    inherit! :search_paths
+  end
+
+  target 'YSMSwiftToolsUITests' do
+    inherit! :search_paths
+  end
+
+end
