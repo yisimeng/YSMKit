@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     lazy var tableView: UITableView = {
-       let tableView = UITableView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 200), style: .plain)
+       let tableView = UITableView(frame: CGRect(x: 0, y: 20, width: self.view.frame.width, height: 200), style: .plain)
         return tableView
     }()
     
@@ -31,7 +31,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "a")
         view.addSubview(scrollView)
         scrollView.addSubview(tableView)
-    
+        
+        
+        
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

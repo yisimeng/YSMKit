@@ -24,7 +24,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-}
+    [@"" boundingRectWithSize:CGSizeZero options:NSStringDrawingUsesFontLeading attributes:@{} context:nil];
+     
+     }
+     
 
 
 

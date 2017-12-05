@@ -15,6 +15,7 @@
 		6F3A961D1F4D6DF7007792B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F3A961B1F4D6DF7007792B6 /* LaunchScreen.storyboard */; };
 		6F3A96281F4D6DF7007792B6 /* YSMOCToolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3A96271F4D6DF7007792B6 /* YSMOCToolsTests.m */; };
 		6F3A96331F4D6DF7007792B6 /* YSMOCToolsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3A96321F4D6DF7007792B6 /* YSMOCToolsUITests.m */; };
+		8F00395A1FD68868008F81C3 /* NSString+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0039591FD68868008F81C3 /* NSString+Frame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		6F3A962E1F4D6DF7007792B6 /* YSMOCToolsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YSMOCToolsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F3A96321F4D6DF7007792B6 /* YSMOCToolsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSMOCToolsUITests.m; sourceTree = "<group>"; };
 		6F3A96341F4D6DF7007792B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F0039581FD68868008F81C3 /* NSString+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Frame.h"; sourceTree = "<group>"; };
+		8F0039591FD68868008F81C3 /* NSString+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Frame.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +108,7 @@
 				6F3A96111F4D6DF7007792B6 /* AppDelegate.m */,
 				6F3A96131F4D6DF7007792B6 /* ViewController.h */,
 				6F3A96141F4D6DF7007792B6 /* ViewController.m */,
-				6FF5D3051F7133EB0034FD0A /* Extensions */,
+				8F0039571FD68856008F81C3 /* Extension */,
 				6F3A96161F4D6DF7007792B6 /* Main.storyboard */,
 				6F3A96191F4D6DF7007792B6 /* Assets.xcassets */,
 				6F3A961B1F4D6DF7007792B6 /* LaunchScreen.storyboard */,
@@ -141,11 +144,13 @@
 			path = YSMOCToolsUITests;
 			sourceTree = "<group>";
 		};
-		6FF5D3051F7133EB0034FD0A /* Extensions */ = {
+		8F0039571FD68856008F81C3 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				8F0039581FD68868008F81C3 /* NSString+Frame.h */,
+				8F0039591FD68868008F81C3 /* NSString+Frame.m */,
 			);
-			name = Extensions;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F00395A1FD68868008F81C3 /* NSString+Frame.m in Sources */,
 				6F3A96151F4D6DF7007792B6 /* ViewController.m in Sources */,
 				6F3A96121F4D6DF7007792B6 /* AppDelegate.m in Sources */,
 				6F3A960F1F4D6DF7007792B6 /* main.m in Sources */,
