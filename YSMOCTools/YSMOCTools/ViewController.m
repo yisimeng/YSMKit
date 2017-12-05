@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import <objc/runtime.h>
-
+#import "UIImage+Category.h"
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *first;
@@ -24,9 +24,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [@"" boundingRectWithSize:CGSizeZero options:NSStringDrawingUsesFontLeading attributes:@{} context:nil];
-     
-     }
+    
+}
      
 
 

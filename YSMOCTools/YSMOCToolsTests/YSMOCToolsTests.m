@@ -7,8 +7,6 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "NSString+Frame.h"
-
 
 @interface YSMOCToolsTests : XCTestCase
 

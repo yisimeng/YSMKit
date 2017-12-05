@@ -16,6 +16,7 @@
 		6F3A96281F4D6DF7007792B6 /* YSMOCToolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3A96271F4D6DF7007792B6 /* YSMOCToolsTests.m */; };
 		6F3A96331F4D6DF7007792B6 /* YSMOCToolsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3A96321F4D6DF7007792B6 /* YSMOCToolsUITests.m */; };
 		8F00395A1FD68868008F81C3 /* NSString+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0039591FD68868008F81C3 /* NSString+Frame.m */; };
+		8F0039611FD6A618008F81C3 /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0039601FD6A618008F81C3 /* UIImage+Category.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		6F3A96341F4D6DF7007792B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F0039581FD68868008F81C3 /* NSString+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Frame.h"; sourceTree = "<group>"; };
 		8F0039591FD68868008F81C3 /* NSString+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Frame.m"; sourceTree = "<group>"; };
+		8F00395F1FD6A618008F81C3 /* UIImage+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
+		8F0039601FD6A618008F81C3 /* UIImage+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +152,8 @@
 			children = (
 				8F0039581FD68868008F81C3 /* NSString+Frame.h */,
 				8F0039591FD68868008F81C3 /* NSString+Frame.m */,
+				8F00395F1FD6A618008F81C3 /* UIImage+Category.h */,
+				8F0039601FD6A618008F81C3 /* UIImage+Category.m */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -291,6 +296,7 @@
 				6F3A96151F4D6DF7007792B6 /* ViewController.m in Sources */,
 				6F3A96121F4D6DF7007792B6 /* AppDelegate.m in Sources */,
 				6F3A960F1F4D6DF7007792B6 /* main.m in Sources */,
+				8F0039611FD6A618008F81C3 /* UIImage+Category.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
