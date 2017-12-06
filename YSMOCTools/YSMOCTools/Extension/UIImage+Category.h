@@ -10,6 +10,17 @@
 
 @interface UIImage (Category)
 
+/**
+ 占用内存大小
+ */
 @property(nonatomic, readonly) NSUInteger memorysize;
+
+/**
+ 图片上某一像素点的颜色
+
+ @param point <#point description#>
+ @return <#return value description#>
+ */
+- (UIColor *)colorAtPixel:(CGPoint)point;
 
 @end
