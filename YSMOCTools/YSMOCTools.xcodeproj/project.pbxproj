@@ -18,6 +18,7 @@
 		8F00395A1FD68868008F81C3 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0039591FD68868008F81C3 /* NSString+Category.m */; };
 		8F0039611FD6A618008F81C3 /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0039601FD6A618008F81C3 /* UIImage+Category.m */; };
 		8F0039661FD6B533008F81C3 /* NSUserDefaults+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0039651FD6B533008F81C3 /* NSUserDefaults+Category.m */; };
+		8F00396C1FD8F161008F81C3 /* NSNumber+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F00396B1FD8F161008F81C3 /* NSNumber+Category.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		8F0039601FD6A618008F81C3 /* UIImage+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
 		8F0039641FD6B533008F81C3 /* NSUserDefaults+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Category.h"; sourceTree = "<group>"; };
 		8F0039651FD6B533008F81C3 /* NSUserDefaults+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Category.m"; sourceTree = "<group>"; };
+		8F00396A1FD8F161008F81C3 /* NSNumber+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Category.h"; sourceTree = "<group>"; };
+		8F00396B1FD8F161008F81C3 /* NSNumber+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Category.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +162,8 @@
 				8F0039601FD6A618008F81C3 /* UIImage+Category.m */,
 				8F0039641FD6B533008F81C3 /* NSUserDefaults+Category.h */,
 				8F0039651FD6B533008F81C3 /* NSUserDefaults+Category.m */,
+				8F00396A1FD8F161008F81C3 /* NSNumber+Category.h */,
+				8F00396B1FD8F161008F81C3 /* NSNumber+Category.m */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -302,6 +307,7 @@
 				6F3A96151F4D6DF7007792B6 /* ViewController.m in Sources */,
 				6F3A96121F4D6DF7007792B6 /* AppDelegate.m in Sources */,
 				6F3A960F1F4D6DF7007792B6 /* main.m in Sources */,
+				8F00396C1FD8F161008F81C3 /* NSNumber+Category.m in Sources */,
 				8F0039611FD6A618008F81C3 /* UIImage+Category.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
