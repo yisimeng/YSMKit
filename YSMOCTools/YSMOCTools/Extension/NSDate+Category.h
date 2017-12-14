@@ -10,6 +10,12 @@
 
 @interface NSDate (Category)
 
-- (BOOL)isEqualWeak:(NSDate *)date;
+/**
+ 是否在同一周
+
+ @param otherDate otherDate
+ @return bool value
+ */
+- (BOOL)isEqualWeak:(NSDate *)otherDate;
 
 @end

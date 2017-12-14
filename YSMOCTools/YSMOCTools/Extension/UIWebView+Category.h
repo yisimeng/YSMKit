@@ -10,7 +10,11 @@
 
 @interface UIWebView (Category)
 
-// 更新User-Agent
+/**
+ 更新User-Agent
+
+ @param str 添加的字符串
+ */
 + (void)appendingUserAgent:(NSString *)str;
 
 @end
