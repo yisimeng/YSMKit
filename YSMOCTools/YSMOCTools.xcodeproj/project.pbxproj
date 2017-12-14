@@ -21,6 +21,7 @@
 		8F00396C1FD8F161008F81C3 /* NSNumber+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F00396B1FD8F161008F81C3 /* NSNumber+Category.m */; };
 		8F618EC11FE0D8F0005C30A9 /* UIWebView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F618EC01FE0D8F0005C30A9 /* UIWebView+Category.m */; };
 		8FCA3AB31FE25FB700443C3D /* NSDate+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCA3AB21FE25FB700443C3D /* NSDate+Category.m */; };
+		8FCA3AB61FE2631300443C3D /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCA3AB51FE2631300443C3D /* UIColor+Category.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		8F618EC01FE0D8F0005C30A9 /* UIWebView+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+Category.m"; sourceTree = "<group>"; };
 		8FCA3AB11FE25FB700443C3D /* NSDate+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Category.h"; sourceTree = "<group>"; };
 		8FCA3AB21FE25FB700443C3D /* NSDate+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Category.m"; sourceTree = "<group>"; };
+		8FCA3AB41FE2631300443C3D /* UIColor+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Category.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		8FCA3AB51FE2631300443C3D /* UIColor+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Category.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +169,8 @@
 				8F0039591FD68868008F81C3 /* NSString+Category.m */,
 				8FCA3AB11FE25FB700443C3D /* NSDate+Category.h */,
 				8FCA3AB21FE25FB700443C3D /* NSDate+Category.m */,
+				8FCA3AB41FE2631300443C3D /* UIColor+Category.h */,
+				8FCA3AB51FE2631300443C3D /* UIColor+Category.m */,
 				8F00395F1FD6A618008F81C3 /* UIImage+Category.h */,
 				8F0039601FD6A618008F81C3 /* UIImage+Category.m */,
 				8F0039641FD6B533008F81C3 /* NSUserDefaults+Category.h */,
@@ -321,6 +326,7 @@
 				8F0039611FD6A618008F81C3 /* UIImage+Category.m in Sources */,
 				8F618EC11FE0D8F0005C30A9 /* UIWebView+Category.m in Sources */,
 				8FCA3AB31FE25FB700443C3D /* NSDate+Category.m in Sources */,
+				8FCA3AB61FE2631300443C3D /* UIColor+Category.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
