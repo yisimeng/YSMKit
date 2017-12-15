@@ -25,6 +25,7 @@
 		8F0F0AAF1FE27C7D00A4705B /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0F0AA51FE27C7C00A4705B /* UIView+Category.m */; };
 		8F0F0AB01FE27C7D00A4705B /* UITableView+EmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0F0AA61FE27C7C00A4705B /* UITableView+EmptyView.m */; };
 		8F618EC11FE0D8F0005C30A9 /* UIWebView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F618EC01FE0D8F0005C30A9 /* UIWebView+Category.m */; };
+		8FC23BFA1FE3A6CC00D92883 /* YSMButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC23BF71FE3A6A700D92883 /* YSMButton.m */; };
 		8FCA3AB31FE25FB700443C3D /* NSDate+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCA3AB21FE25FB700443C3D /* NSDate+Category.m */; };
 		8FCA3AB61FE2631300443C3D /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCA3AB51FE2631300443C3D /* UIColor+Category.m */; };
 /* End PBXBuildFile section */
@@ -83,6 +84,8 @@
 		8F0F0AAA1FE27C7C00A4705B /* UITableView+EmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+EmptyView.h"; sourceTree = "<group>"; };
 		8F618EBF1FE0D8F0005C30A9 /* UIWebView+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWebView+Category.h"; sourceTree = "<group>"; };
 		8F618EC01FE0D8F0005C30A9 /* UIWebView+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+Category.m"; sourceTree = "<group>"; };
+		8FC23BF71FE3A6A700D92883 /* YSMButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSMButton.m; sourceTree = "<group>"; };
+		8FC23BF81FE3A6A700D92883 /* YSMButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSMButton.h; sourceTree = "<group>"; };
 		8FCA3AB11FE25FB700443C3D /* NSDate+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Category.h"; sourceTree = "<group>"; };
 		8FCA3AB21FE25FB700443C3D /* NSDate+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Category.m"; sourceTree = "<group>"; };
 		8FCA3AB41FE2631300443C3D /* UIColor+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Category.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -141,6 +144,7 @@
 				6F3A96111F4D6DF7007792B6 /* AppDelegate.m */,
 				6F3A96131F4D6DF7007792B6 /* ViewController.h */,
 				6F3A96141F4D6DF7007792B6 /* ViewController.m */,
+				8FC23BF61FE3A68C00D92883 /* CustomView */,
 				8F0039571FD68856008F81C3 /* Extension */,
 				6F3A96161F4D6DF7007792B6 /* Main.storyboard */,
 				6F3A96191F4D6DF7007792B6 /* Assets.xcassets */,
@@ -206,6 +210,15 @@
 				8F0F0AA51FE27C7C00A4705B /* UIView+Category.m */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		8FC23BF61FE3A68C00D92883 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				8FC23BF81FE3A6A700D92883 /* YSMButton.h */,
+				8FC23BF71FE3A6A700D92883 /* YSMButton.m */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,6 +366,7 @@
 				8F00396C1FD8F161008F81C3 /* NSNumber+Category.m in Sources */,
 				8F0039611FD6A618008F81C3 /* UIImage+Category.m in Sources */,
 				8F0F0AB01FE27C7D00A4705B /* UITableView+EmptyView.m in Sources */,
+				8FC23BFA1FE3A6CC00D92883 /* YSMButton.m in Sources */,
 				8F0F0AAB1FE27C7D00A4705B /* NSObject+Hook.m in Sources */,
 				8F618EC11FE0D8F0005C30A9 /* UIWebView+Category.m in Sources */,
 				8FCA3AB31FE25FB700443C3D /* NSDate+Category.m in Sources */,

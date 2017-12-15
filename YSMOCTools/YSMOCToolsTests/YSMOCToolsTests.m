@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "UIColor+Category.h"
+#import "YSMButton.h"
 
 @interface YSMOCToolsTests : XCTestCase
 
