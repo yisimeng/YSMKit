@@ -10,9 +10,20 @@
 
 @implementation UIColor (Category)
 
-- (const CGFloat *)colorComponents{
+- (const CGFloat *)colorComponentsOfScale{
     const CGFloat * components = CGColorGetComponents(self.CGColor);
     return components;
+}
+
+/**
+ *  将图片转化背景颜色
+ *
+ *  @param imageName <#image description#>
+ *
+ *  @return <#return value description#>
+ */
+- (UIColor *)colorWithImageName:(NSString *)imageName{
+    return [UIColor colorWithPatternImage:[UIImage imageNamed:imageName]];
 }
 
 @end

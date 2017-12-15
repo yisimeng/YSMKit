@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "NSString+Category.h"
+#import "UIColor+Category.h"
 
 @interface YSMOCToolsTests : XCTestCase
 

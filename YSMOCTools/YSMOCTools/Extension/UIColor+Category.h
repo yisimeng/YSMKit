@@ -15,6 +15,15 @@
 
  @return r:[0] g:[1] b:[2] a:[3]
  */
-- (const CGFloat *)colorComponents;
+- (const CGFloat *)colorComponentsOfScale;
+
+/**
+ *  将图片转化背景颜色
+ *
+ *  @param imageName <#image description#>
+ *
+ *  @return <#return value description#>
+ */
+- (UIColor *)colorWithImageName:(NSString *)imageName;
 
 @end
