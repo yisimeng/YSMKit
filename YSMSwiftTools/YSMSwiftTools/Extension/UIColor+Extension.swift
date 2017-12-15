@@ -31,10 +31,9 @@ extension UIColor{
     }
     
     //通过16进制字符串获取颜色
-    
     @objc public convenience init?(hexString: String, alpha : CGFloat = 1.0) {
         //hex至少是6位，常用的前缀：‘#’，‘##’，‘0x’
-        guard hexString.characters.count >= 6 else {
+        guard hexString.count >= 6 else {
             return nil
         }
         //判断前缀,截取字符串
@@ -48,7 +47,7 @@ extension UIColor{
         //将所有小写转换成大写
         tempHex = tempHex.uppercased()
         
-        assert(tempHex.characters.count == 6, "hex错误")
+        assert(tempHex.count == 6, "hex错误")
         
         //分别取出字符串
         //R
@@ -69,6 +68,13 @@ extension UIColor{
         
         //初始化颜色
         self.init(r : CGFloat(r) , g : CGFloat(g) , b : CGFloat(b) , alpha : alpha)
+    }
+    
+    public convenience init?(image imageName: String) {
+        guard let image = UIImage(named: imageName) else {
+            return nil
+        }
+        self.init(patternImage: image)
     }
     
     /// 随机颜色
