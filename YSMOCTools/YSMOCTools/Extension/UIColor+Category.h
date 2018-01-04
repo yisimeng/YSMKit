@@ -10,6 +10,8 @@
 
 @interface UIColor (Category)
 
++ (UIColor *)randomColor;
+
 /**
  颜色的rgba分量
 
