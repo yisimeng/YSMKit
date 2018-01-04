@@ -9,6 +9,9 @@
 #import "ViewController.h"
 #import <objc/runtime.h>
 #import "UIImage+Category.h"
+#import "FloatBallView.h"
+
+
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *first;
@@ -20,15 +23,25 @@
 
 @implementation ViewController
 
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
 }
      
+- (IBAction)show:(id)sender {
+    
+    [[FloatBallView shared] show];
+    
+}
 
+- (IBAction)hide:(id)sender {
+    [[FloatBallView shared] hide];
+}
 
+- (IBAction)test:(id)sender {
+    
+    
+}
 
 
 @end

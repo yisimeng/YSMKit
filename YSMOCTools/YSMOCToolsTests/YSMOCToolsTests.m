@@ -26,6 +26,9 @@
 }
 
 - (void)testExample {
+    NSObject * obj1 = [[NSObject alloc] init];
+    NSObject * obj2 = [[NSObject alloc] init];
+    NSArray * array = @[obj1, obj2];
     
 }
 

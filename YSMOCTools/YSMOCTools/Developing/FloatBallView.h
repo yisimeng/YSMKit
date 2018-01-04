@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FloatBallView : UIView
+@interface FloatBallView : UIButton
+
++ (instancetype)shared;
+
+- (void)show;
+
+- (void)hide;
 
 @end

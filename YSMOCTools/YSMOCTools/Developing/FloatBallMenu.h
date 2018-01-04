@@ -6,8 +6,11 @@
 //  Copyright © 2018年 忆思梦吧. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface FloatBallMenu : NSObject
+
+@property (strong, nonatomic) UIImage * image;
+@property (strong, nonatomic) NSString * title;
 
 @end

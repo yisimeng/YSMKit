@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FloatBallMenu.h"
 
 @interface FloatBallMenuContainer : UIView
+
+- (instancetype)initWithMenus:(NSArray<FloatBallMenu *> *)menus;
 
 @end
