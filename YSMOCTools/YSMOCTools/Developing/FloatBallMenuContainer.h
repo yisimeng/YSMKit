@@ -13,4 +13,6 @@
 
 - (instancetype)initWithMenus:(NSArray<FloatBallMenu *> *)menus;
 
+
+- (void)animateShowLeft:(BOOL) isLeft;
 @end

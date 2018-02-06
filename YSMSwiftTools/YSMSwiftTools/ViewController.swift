@@ -8,43 +8,35 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
-    lazy var tableView: UITableView = {
-       let tableView = UITableView(frame: CGRect(x: 0, y: 20, width: self.view.frame.width, height: 200), style: .plain)
-        return tableView
-    }()
+class ViewController: UIViewController {
+    var ball: FloatBall?
     
-    lazy var scrollView: UIScrollView = {
-        let scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 2000))
-        scrollView.contentSize = CGSize(width: self.view.frame.width, height: 2000)
-        return scrollView
-    }()
-    
+    var customView: CustomView = CustomView(frame: CGRect(x: 100, y: 100, width: 160, height: 40))
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.rowHeight = 100
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "a")
-        view.addSubview(scrollView)
-        scrollView.addSubview(tableView)
+        view.addSubview(customView)
         
         
+        
+        
+//        let item1 = ShareItem(image: "share_qq") {
+//            print("1")
+//        }
+//        let item2 = ShareItem(image: "share_qq") {
+//            print("2")
+//        }
+//        let item3 = ShareItem(image: "share_qq") {
+//            print("3")
+//        }
+//        let shareView = ShareView(shareItems: [item1,item3])
+//        shareView.backgroundColor = .yellow
+//        shareView.frame = CGRect(x: 0, y: 300, width: view.bounds.width, height: 100)
+//        view.addSubview(shareView)
         
     }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "a", for: indexPath)
-        cell.textLabel?.text = "\(indexPath.row)"
-        print("啊啊啊啊啊啊")
-        return cell
+    @IBAction func click(_ sender: Any) {
+        ShareModule.shared.show()
     }
 }
 

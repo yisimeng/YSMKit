@@ -29,7 +29,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         instance = [FloatBallView buttonWithType:UIButtonTypeCustom];
-        instance.frame = CGRectMake(0, 0, 50, 50);
+        instance.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height/2, 50, 50);
         instance.backgroundColor = [UIColor orangeColor];
         instance.layer.cornerRadius = 25;
         [instance addTarget:instance action:@selector(tap:) forControlEvents:UIControlEventTouchUpInside];
@@ -41,6 +41,7 @@
 
 - (void)show{
     [[UIApplication sharedApplication].delegate.window addSubview:self];
+    [[UIApplication sharedApplication].delegate.window addSubview:self.menuContainer];
 }
 
 - (void)hide{
@@ -52,6 +53,7 @@
 - (FloatBallMenuContainer *)menuContainer{
     if (_menuContainer == nil) {
         _menuContainer = [[FloatBallMenuContainer alloc] initWithMenus:self.menus];
+        _menuContainer.hidden = YES;
     }
     return _menuContainer;
 }
@@ -77,7 +79,14 @@
     }else {
         [self showMenu];
     }
-    tap.selected = !tap.isSelected;
+}
+
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event{
+    UIView * targetView = [super hitTest:point withEvent:event];
+    if (targetView != self) {
+        [self hideMenu];
+    }
+    return targetView;
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -138,17 +147,17 @@
     if (self.center.x < self.superview.bounds.size.width/2) {
         // 左边
         self.menuContainer.center = CGPointMake(10+self.frame.size.width+self.menuContainer.bounds.size.width/2, self.center.y);
+        [_menuContainer animateShowLeft:YES];
     }else {
         // 右边
         self.menuContainer.center = CGPointMake(self.superview.bounds.size.width-10-self.frame.size.width-self.menuContainer.bounds.size.width/2, self.center.y);
+        [_menuContainer animateShowLeft:NO];
     }
-    [[UIApplication sharedApplication].delegate.window addSubview:self.menuContainer];
+    self.menuContainer.hidden = NO;
+    self.selected = YES;
 }
 - (void)hideMenu{
-    if (self.menuContainer.superview == nil) {
-        return;
-    }
-    [self.menuContainer removeFromSuperview];
+    self.menuContainer.hidden = YES;
     self.selected = NO;
 }
 

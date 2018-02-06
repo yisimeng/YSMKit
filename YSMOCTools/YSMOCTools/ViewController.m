@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *second;
 @property (weak, nonatomic) IBOutlet UIButton *third;
 
+
 @end
 
 @implementation ViewController
@@ -39,8 +40,6 @@
 }
 
 - (IBAction)test:(id)sender {
-    
-    
 }
 
 
