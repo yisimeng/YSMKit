@@ -8,35 +8,36 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     var ball: FloatBall?
+    
+    var timer: GCDTimer?
     
     var customView: CustomView = CustomView(frame: CGRect(x: 100, y: 100, width: 160, height: 40))
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.addSubview(customView)
-        
-        
-        
-        
-//        let item1 = ShareItem(image: "share_qq") {
-//            print("1")
-//        }
-//        let item2 = ShareItem(image: "share_qq") {
-//            print("2")
-//        }
-//        let item3 = ShareItem(image: "share_qq") {
-//            print("3")
-//        }
-//        let shareView = ShareView(shareItems: [item1,item3])
-//        shareView.backgroundColor = .yellow
-//        shareView.frame = CGRect(x: 0, y: 300, width: view.bounds.width, height: 100)
-//        view.addSubview(shareView)
+        timer = GCDTimer.scheduled(time: 2, block: {
+            print("heh")
+        })
         
     }
     @IBAction func click(_ sender: Any) {
-        ShareModule.shared.show()
+//        ShareModule.shared.show()
+        timer?.resume()
+    }
+    
+    @IBAction func sus(_ sender: Any) {
+        timer?.suspend()
+    }
+    
+    @IBAction func cancel(_ sender: Any) {
+        timer?.cancel()
+    }
+    func test() {
+        print("hheh")
     }
 }
 
