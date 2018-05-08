@@ -10,34 +10,21 @@ import UIKit
 
 
 class ViewController: UIViewController {
-    var ball: FloatBall?
-    
-    var timer: GCDTimer?
-    
-    var customView: CustomView = CustomView(frame: CGRect(x: 100, y: 100, width: 160, height: 40))
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(customView)
-        timer = GCDTimer.scheduled(time: 2, block: {
-            print("heh")
-        })
-        
     }
     @IBAction func click(_ sender: Any) {
-//        ShareModule.shared.show()
-        timer?.resume()
+        ShareModule.shared.show()
     }
     
     @IBAction func sus(_ sender: Any) {
-        timer?.suspend()
+        NewShareModule.share(link: "hehe", title: "hehe", description: "hee", image: nil)
     }
     
     @IBAction func cancel(_ sender: Any) {
-        timer?.cancel()
-    }
-    func test() {
-        print("hheh")
+        self.present(TableViewController(), animated: true, completion: nil)
     }
 }
 
