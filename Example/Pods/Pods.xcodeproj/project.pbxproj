@@ -61,8 +61,8 @@
 		8D033DA96862A82B3D20277E29C2CE33 /* UIViewController+YSMCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = E357931F9C99255AF5B3CD8BAB334EAF /* UIViewController+YSMCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D9636C74777C684BDF312EE66F8A585 /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 353BE42A5F94DADECC35B1DBDA6A1231 /* AFNetworkReachabilityManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8ED2ED895E40544624BD2CAB73B1BD6C /* UIDevice+YSMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7532980C27FCB377E6B93B890B38EA02 /* UIDevice+YSMCategory.m */; };
-		8F36943B2181AD7200120098 /* YSMStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3694392181AD7200120098 /* YSMStackView.m */; };
-		8F36943C2181AD7200120098 /* YSMStackView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F36943A2181AD7200120098 /* YSMStackView.h */; };
+		8F3694412181CFA600120098 /* YSMStackView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F36943F2181CFA600120098 /* YSMStackView.h */; };
+		8F3694422181CFA600120098 /* YSMStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3694402181CFA600120098 /* YSMStackView.m */; };
 		8F8BEE486112DE87B470F2EB01B0FCE9 /* UITableView+YSMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = C28C0A950E1B6C1559707F6DC1865271 /* UITableView+YSMCategory.m */; };
 		8FECC5C78DDAADBE8FB1856C88E435EA /* NSObject+YSMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EB291D49597D5A644F5A0D4E81499443 /* NSObject+YSMCategory.m */; };
 		905B667B23CB00197041C83E9959B56E /* UIColor+YSMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE3FE4681CA34A9F2AC6DB5F1E4BE84 /* UIColor+YSMCategory.m */; };
@@ -202,8 +202,8 @@
 		89079CBF2D1FAE088B988BD609B0B785 /* YSMTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YSMTextView.m; path = YSMKit/Classes/YSMCustom/YSMTextView.m; sourceTree = "<group>"; };
 		8A23A5F73C286B71E72DBB73267832F1 /* NSData+YSMCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+YSMCategory.h"; path = "YSMKit/Classes/YSMCategory/NSData+YSMCategory.h"; sourceTree = "<group>"; };
 		8B111A72E572F236A399CC7F2E7D3E85 /* AFNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFNetworking-dummy.m"; sourceTree = "<group>"; };
-		8F3694392181AD7200120098 /* YSMStackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSMStackView.m; sourceTree = "<group>"; };
-		8F36943A2181AD7200120098 /* YSMStackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSMStackView.h; sourceTree = "<group>"; };
+		8F36943F2181CFA600120098 /* YSMStackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YSMStackView.h; path = YSMKit/Classes/YSMCustom/YSMStackView.h; sourceTree = "<group>"; };
+		8F3694402181CFA600120098 /* YSMStackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YSMStackView.m; path = YSMKit/Classes/YSMCustom/YSMStackView.m; sourceTree = "<group>"; };
 		8F4C4B6FE0864C1A8E1AC0DA3978CED8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9225635972F5946206804BE1C2A8CA60 /* Pods-YSMKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YSMKit_Example-dummy.m"; sourceTree = "<group>"; };
 		922A0EC3BBB70A73ADB1E84F5F6AC3B0 /* UIButton+YSMCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+YSMCategory.m"; path = "YSMKit/Classes/YSMCategory/UIButton+YSMCategory.m"; sourceTree = "<group>"; };
@@ -448,8 +448,8 @@
 		803A0443E5A8B6684BB2575A3087C9B1 /* YSMCustom */ = {
 			isa = PBXGroup;
 			children = (
-				8F36943A2181AD7200120098 /* YSMStackView.h */,
-				8F3694392181AD7200120098 /* YSMStackView.m */,
+				8F36943F2181CFA600120098 /* YSMStackView.h */,
+				8F3694402181CFA600120098 /* YSMStackView.m */,
 				582D7677D318833C69BC26810859ABEA /* YSMTextView.h */,
 				89079CBF2D1FAE088B988BD609B0B785 /* YSMTextView.m */,
 				ED4BC7B26A87C4CA2381D0F2786626E3 /* YSMFloatBall */,
@@ -663,7 +663,6 @@
 				EEB85B61F53F3A9E91E6B17744AA42F1 /* UIImage+YSMCategory.h in Headers */,
 				542C5340FB749694576BC0FE0CED1E8A /* UIStoryboard+YSMCategory.h in Headers */,
 				646D4FDB462A4BFE3B7D40F504BE913F /* UITableView+YSMCategory.h in Headers */,
-				8F36943C2181AD7200120098 /* YSMStackView.h in Headers */,
 				4ACFB5A30C5387BCC0F08858B5F55122 /* UITextView+YSMCategory.h in Headers */,
 				F931854B7CAF183424210E600FAA3224 /* UIView+YSMCategory.h in Headers */,
 				1FA4DEC6B5F96725C539EB654AA46F66 /* UIView+YSMToast.h in Headers */,
@@ -695,6 +694,7 @@
 				C12BAA822391D670C53FF0C2299654AD /* AFURLSessionManager.h in Headers */,
 				AD868043328B2125E27A5DC14D11958F /* UIActivityIndicatorView+AFNetworking.h in Headers */,
 				0ACBBA158F4635FAE16AB5456ABADCA4 /* UIButton+AFNetworking.h in Headers */,
+				8F3694412181CFA600120098 /* YSMStackView.h in Headers */,
 				F1199E40BF416FC1ACA2DDCD7B2E23A1 /* UIImage+AFNetworking.h in Headers */,
 				A5B069CA1170E03891AC5648DE5CF87D /* UIImageView+AFNetworking.h in Headers */,
 				ADD011E9ABBD96D70AAA32A4B9ACBD02 /* UIKit+AFNetworking.h in Headers */,
@@ -839,7 +839,6 @@
 				9C30A0E950ABEFAB82B09620F37F7292 /* NSNumber+YSMCategory.m in Sources */,
 				8FECC5C78DDAADBE8FB1856C88E435EA /* NSObject+YSMCategory.m in Sources */,
 				AF301A485F49E019AD60E520F17A69A6 /* NSString+YSMCategory.m in Sources */,
-				8F36943B2181AD7200120098 /* YSMStackView.m in Sources */,
 				4BF7E9882CF708C405D0E5AF1D9E21F4 /* NSUserDefaults+YSMCategory.m in Sources */,
 				D08DB2F348F48702BD6FCF398F528A39 /* UIButton+YSMCategory.m in Sources */,
 				905B667B23CB00197041C83E9959B56E /* UIColor+YSMCategory.m in Sources */,
@@ -878,6 +877,7 @@
 				6595C6295B9EBBF40751A376239681FD /* UIProgressView+AFNetworking.m in Sources */,
 				4AA3A9FC9AAD94C226CA975946C9395B /* UIRefreshControl+AFNetworking.m in Sources */,
 				3345805C0D8E8D0726F7E5981DA61A5F /* UIWebView+AFNetworking.m in Sources */,
+				8F3694422181CFA600120098 /* YSMStackView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
