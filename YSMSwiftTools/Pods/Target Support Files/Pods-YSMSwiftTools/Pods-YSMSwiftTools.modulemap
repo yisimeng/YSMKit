@@ -1,6 +1,0 @@
-framework module Pods_YSMSwiftTools {
-  umbrella header "Pods-YSMSwiftTools-umbrella.h"
-
-  export *
-  module * { export * }
-}
