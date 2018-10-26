@@ -30,21 +30,22 @@ Pod::Spec.new do |s|
     
     s.ios.deployment_target = '8.0'
     
-    s.source_files = 'YSMKit/Classes/*.h'
+    s.source_files = 'YSMKit/Classes/**/*'
+
     
-    s.subspec 'YSMCategory' do |c|
-        c.source_files = 'YSMKit/Classes/YSMCategory/*'
-    end
+    #s.subspec 'YSMCategory' do |c|
+    #    c.source_files = 'YSMKit/Classes/YSMCategory/*'
+    #end
     
-    s.subspec 'YSMCustom' do |c|
-        c.source_files = 'YSMKit/Classes/YSMCustom/**/*'
-        c.dependency 'YSMKit/YSMCategory'
-    end
+    #s.subspec 'YSMCustom' do |c|
+    #   c.source_files = 'YSMKit/Classes/YSMCustom/**/*'
+    #   c.dependency 'YSMKit/YSMCategory'
+    #end
     
-    s.subspec 'YSMNetwork' do |net|
-        net.source_files = 'YSMKit/Classes/YSMNetwork/*'
-        net.dependency 'AFNetworking', '~> 3.0'
-    end
+    #s.subspec 'YSMNetwork' do |net|
+    #   net.source_files = 'YSMKit/Classes/YSMNetwork/*'
+    #   net.dependency 'AFNetworking', '~> 3.0'
+    #end
     
     
     
@@ -54,5 +55,5 @@ Pod::Spec.new do |s|
     
     # s.public_header_files = 'Pod/Classes/**/*.h'
     # s.frameworks = 'UIKit', 'MapKit'
-    # s.dependency 'AFNetworking', '~> 2.3'
+     s.dependency 'AFNetworking', '~> 3.0'
 end
