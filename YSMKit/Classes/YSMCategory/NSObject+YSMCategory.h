@@ -9,13 +9,18 @@
 #import <Foundation/Foundation.h>
 
 @interface NSObject (YSMCategory)
-
 /**
- *  获取类方法列表
- *
- *  @return <#return value description#>
+ 类方法列表
+
+ @return class methods
  */
-+ (NSMutableArray *)methodNameArray;
++ (NSMutableArray *)classMethods;
+/**
+ 实例方法列表
+
+ @return instance methods
+ */
++ (NSMutableArray *)instanceMethods;
 /**
  *  获取类属性列表
  *

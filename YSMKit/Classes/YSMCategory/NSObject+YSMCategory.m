@@ -11,7 +11,11 @@
 
 @implementation NSObject (YSMCategory)
 
-+ (NSMutableArray *)methodNameArray{
++ (NSMutableArray *)classMethods{
+    return [object_getClass(self) instanceMethods];
+}
+
++ (NSMutableArray *)instanceMethods{
     u_int count;
     NSMutableArray * methodArray = [NSMutableArray arrayWithCapacity:1];
     Method * methods = class_copyMethodList(self, &count);
