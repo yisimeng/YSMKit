@@ -190,9 +190,9 @@ static int tagOffSet = 10;
 }
 
 - (void)removeAllSubviews{
-    for (UIView * subview in self.subviews) {
-        [subview removeFromSuperview];
-    }
+    [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [obj removeFromSuperview];
+    }];
 }
 @end
 

@@ -58,7 +58,6 @@
 #pragma mark -- Getter & Setter
 
 - (void)setPlaceholder:(NSString *)placeholder{
-    NSLog(@"33333");
     _placeholder = placeholder;
     if (_placeholderLabel == nil) {
         _placeholderLabel = [[UILabel alloc] init];
@@ -75,9 +74,7 @@
         _placeholderLabel.textColor = [UIColor colorWithWhite:0.7 alpha:1.0];
         _placeholderLabel.alpha = 0;
         [self addSubview:_placeholderLabel];
-        NSLog(@"22222");
     }
-    NSLog(@"11111");
     _placeholderLabel.text = placeholder;
     [self _refreshPlaceholder];
 }
