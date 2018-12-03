@@ -7,8 +7,7 @@
 //
 
 #import "YSMViewController.h"
-#import <YSMKit/YSMTextView.h>
-
+#import <YSMKit/YSMKit.h>
 
 @interface YSMViewController ()
 
@@ -16,14 +15,8 @@
 
 @implementation YSMViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
-    
-    
-    YSMTextView * test = [[YSMTextView alloc] initWithFrame:CGRectMake(50, 50, 100, 100)];
-    test.placeholder = @"打点";
-    [self.view addSubview:test];
 }
 
 - (void)didReceiveMemoryWarning
@@ -31,5 +24,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 @end
