@@ -7,13 +7,70 @@
 //
 
 #import "YSMAppDelegate.h"
+#import <UserNotifications/UserNotifications.h>
+
+@interface YSMAppDelegate ()<UNUserNotificationCenterDelegate>
+
+@end
 
 @implementation YSMAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    [self applyPushNotificationAuthorization:application];//请求发送通知授权
+    [self addNotificationAction];//添加自定义通知操作扩展
+
     return YES;
+}
+//请求发送通知授权
+- (void)applyPushNotificationAuthorization:(UIApplication *)application{
+    if (([[[UIDevice currentDevice] systemVersion] floatValue] >= 10.0)) {
+        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        center.delegate = self;
+        [center requestAuthorizationWithOptions:(UNAuthorizationOptionBadge | UNAuthorizationOptionSound | UNAuthorizationOptionAlert) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+            if (!error && granted) {
+                NSLog(@"注册成功");
+            }else{
+                NSLog(@"注册失败");
+            }
+            
+        }];
+        [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
+            NSLog(@"settings========%@",settings);
+        }];
+    } else if (([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)){
+        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound ) categories:nil]];
+    }
+    [application registerForRemoteNotifications];
+}
+
+//添加自定义通知操作扩展
+- (void)addNotificationAction {
+    UNNotificationAction *openAction = [UNNotificationAction actionWithIdentifier:@"NotificationForeverCategory.action.look" title:@"打开App" options:UNNotificationActionOptionForeground];
+    UNNotificationAction *cancelAction = [UNNotificationAction actionWithIdentifier:@"NotificationForeverCategory.action.cancel" title:@"取消" options:UNNotificationActionOptionDestructive];
+    UNNotificationCategory *notificationCategory = [UNNotificationCategory categoryWithIdentifier:@"NotificationForeverCategory" actions:@[openAction, cancelAction] intentIdentifiers:@[] options:UNNotificationCategoryOptionCustomDismissAction];
+    [[UNUserNotificationCenter currentNotificationCenter] setNotificationCategories:[NSSet setWithObject:notificationCategory]];
+}
+
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler{
+    completionHandler(UNNotificationPresentationOptionBadge | UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionSound);
+}
+
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(nonnull UNNotificationResponse *)response withCompletionHandler:(nonnull void (^)(void))completionHandler{
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    if ([response.actionIdentifier isEqualToString:UNNotificationDismissActionIdentifier]) {//点击系统的清除按钮
+        UNTimeIntervalNotificationTrigger *timeTrigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:0.0001f repeats:NO];
+        UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
+        content.title = @"App探索-NotFound";
+        content.body = @"[App探索]JSBox中幽灵触发器的实现原理探索";
+        content.badge = @1;
+        content.categoryIdentifier = @"NotificationForeverCategory";
+        UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:response.notification.request.identifier content:content trigger:timeTrigger];
+        [[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:request withCompletionHandler:nil];
+    }
+    completionHandler();
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

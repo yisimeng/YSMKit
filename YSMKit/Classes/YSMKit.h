@@ -30,6 +30,7 @@
 #import "UIView+YSMToast.h"
 #import "UIViewController+YSMCategory.h"
 #import "UIWebView+YSMCategory.h"
+#import "NSObject+YSMDescription.h"
 
 //custom
 #import "YSMTextView.h"

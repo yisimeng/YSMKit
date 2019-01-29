@@ -248,7 +248,7 @@
 				ORGANIZATIONNAME = yisimeng;
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = 7WBB4H4S24;
+						DevelopmentTeam = 3C7D2ULK28;
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -490,7 +490,7 @@
 			baseConfigurationReference = EA234B11B155E04B4FBE06B2 /* Pods-YSMKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7WBB4H4S24;
+				DEVELOPMENT_TEAM = 3C7D2ULK28;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -513,7 +513,7 @@
 			baseConfigurationReference = 17DC170423E655A1043EC210 /* Pods-YSMKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7WBB4H4S24;
+				DEVELOPMENT_TEAM = 3C7D2ULK28;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
