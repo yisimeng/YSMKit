@@ -22,32 +22,6 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     
-    NSString * str = @"中文1";
-    NSArray * array = @[str,@"中文2",@"中文3",@"中文4",@"中文5",@"中文6",@"中文7",@"中文8",@"中文9",@"中文10"];
-    NSSet *set = [NSSet setWithObjects:@"文字1",@"文字2",@"文字3",@"文字4",@"文字5",@"文字6", nil];
-    NSDictionary * dic = @{array:set};
-    NSLog(@"%@",dic);
-    
-    self.view.backgroundColor = [UIColor blackColor];
-    
-    UIFont * font = [UIFont fontWithName:@"Helvetica" size:15];
-    NSAttributedString *content = [[NSAttributedString alloc] initWithString:@"打发打发打发点阿等发达地方" attributes:@{NSFontAttributeName:font,NSForegroundColorAttributeName:[UIColor whiteColor],NSUnderlineStyleAttributeName: [NSNumber numberWithInt:NSUnderlineStyleSingle],NSBaselineOffsetAttributeName:@(0)}];
-    
-    self.noticeLayer = [CATextLayer layer];
-    _noticeLayer.string = content;
-    _noticeLayer.fontSize = 15;
-    _noticeLayer.alignmentMode = kCAAlignmentCenter;
-    _noticeLayer.frame = CGRectMake(100, 100, 100, 30);
-    _noticeLayer.contentsScale = [UIScreen mainScreen].scale;
-    [self.view.layer addSublayer:_noticeLayer];
-    
-    
-    
-//    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-//    [button addTarget:self action:@selector(sendNotification) forControlEvents:UIControlEventTouchUpInside];
-//    [button setTitle:@"发送一个3s后显示的通知" forState:UIControlStateNormal];
-//    button.frame = CGRectMake(0, 200, [UIScreen mainScreen].bounds.size.width, 100);
-//    [self.view addSubview:button];
     
 }
 

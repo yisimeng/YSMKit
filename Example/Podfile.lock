@@ -15,7 +15,7 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - YSMKit (0.1.0):
-    - AFNetworking (~> 3.0)
+    - AFNetworking
 
 DEPENDENCIES:
   - YSMKit (from `../`)
@@ -30,7 +30,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  YSMKit: b7e0bbaf4265b0d44938888d763cb731262b3a6b
+  YSMKit: a4f88eafdf9c095c77e91b844e5c8089f4ecd2bb
 
 PODFILE CHECKSUM: fde3cf8c89140d14127ccaed98c47f97634fed1b
 
