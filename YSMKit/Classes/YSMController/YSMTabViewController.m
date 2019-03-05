@@ -15,17 +15,46 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - Override
+- (BOOL)shouldAutorotate {
+    if ([self.tabBarController.selectedViewController respondsToSelector:@selector(shouldAutorotate)]) {
+        return [self.tabBarController.selectedViewController shouldAutorotate];
+    }
+    return  [super shouldAutorotate];
 }
-*/
+
+- (UIViewController *)childViewControllerForStatusBarStyle {
+    return self.tabBarController.selectedViewController;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    if ([self.tabBarController.selectedViewController respondsToSelector:@selector(supportedInterfaceOrientations)]) {
+        return [self.tabBarController.selectedViewController supportedInterfaceOrientations];
+    }
+    return  [super supportedInterfaceOrientations];
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+    if ([self.tabBarController.selectedViewController respondsToSelector:@selector(preferredInterfaceOrientationForPresentation)]) {
+        return [self.tabBarController.selectedViewController preferredInterfaceOrientationForPresentation];
+    }
+    return  [super preferredInterfaceOrientationForPresentation];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    if ([self.tabBarController.selectedViewController respondsToSelector:@selector(preferredStatusBarStyle)]) {
+        return self.tabBarController.selectedViewController.preferredStatusBarStyle;
+    }
+    return [super preferredStatusBarStyle];
+}
+
+- (BOOL)prefersStatusBarHidden {
+    if ([self.tabBarController.selectedViewController respondsToSelector:@selector(prefersStatusBarHidden)]) {
+        return self.tabBarController.selectedViewController.prefersStatusBarHidden;
+    }
+    return [super prefersStatusBarHidden];
+}
 
 @end

@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface YSMNavigationController : UIView
+@interface YSMNavigationController : UINavigationController
 
 @end
 

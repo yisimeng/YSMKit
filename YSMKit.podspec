@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
     # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.author           = { 'yisimeng' => '465386131@qq.com' }
-    s.source           = { :git => 'https://github.com/yisimeng/YSMKit.git', :tag => s.version.to_s }
+    s.source           = { :git => 'https://github.com/yisimeng/YSMKit.git' }
     # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
     
     s.ios.deployment_target = '8.0'
@@ -55,5 +55,5 @@ Pod::Spec.new do |s|
     
     # s.public_header_files = 'Pod/Classes/**/*.h'
     # s.frameworks = 'UIKit', 'MapKit'
-     s.dependency 'AFNetworking', '~> 3.0'
+     s.dependency 'AFNetworking'
 end

@@ -15,17 +15,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = UIColor.whiteColor;
+    /// ignore adjust auto scroll 64
+    if (@available(iOS 11.0, *)) {
+        self.automaticallyAdjustsScrollViewInsets = YES;
+    }else{
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+    
+    self.extendedLayoutIncludesOpaqueBars = YES;
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - Orientation
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {return UIInterfaceOrientationMaskPortrait;}
+- (BOOL)shouldAutorotate {return YES;}
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {return UIInterfaceOrientationPortrait;}
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+#pragma mark - Status bar
+- (BOOL)prefersStatusBarHidden { return NO; }
+- (UIStatusBarStyle)preferredStatusBarStyle { return UIStatusBarStyleDefault; }
+- (UIStatusBarAnimation)preferredStatusBarUpdateAnimation { return UIStatusBarAnimationFade; }
 
 @end
